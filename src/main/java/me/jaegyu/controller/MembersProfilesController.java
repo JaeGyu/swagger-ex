@@ -9,12 +9,12 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
 
-@Api(value = "/v1/member-profiles", tags = { "MemberProfile" }, description = "È¸¿ø ÇÁ·ÎÇÊ °ü¸®")
+@Api(value = "/v1/member-profiles", tags = { "MemberProfile" }, description = "íšŒì› í”„ë¡œí•„ ê´€ë¦¬")
 @RestController
 @RequestMapping(value = "/v1/member-profiles")
 public class MembersProfilesController {
 
-	@ApiOperation(value = "ÇÁ·ÎÇÊ Á¤º¸", authorizations = { @Authorization(value = "basicAuth") })
+	@ApiOperation(value = "íšŒì› í”„ë¡œí•„ ê´€ë¦¬")
 	@GetMapping("/{id}")
 	public String memberProfile(@PathVariable("id") String id) {
 		return "{id :" + id + "}";

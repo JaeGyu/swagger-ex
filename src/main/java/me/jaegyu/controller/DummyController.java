@@ -8,12 +8,12 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
 
-@Api(value = "/v1/dummy", tags = { "Dummy" }, description = "¥ıπÃ")
+@Api(value = "/v1/dummy", tags = { "Dummy" }, description = "ÎçîÎØ∏ ÏûÖÎãàÎã§.")
 @RestController
 @RequestMapping(value = "/v1/dummy")
 public class DummyController {
 	
-	@ApiOperation(value = "¥ıπÃ ¡∂»∏", authorizations = { @Authorization(value = "basicAuth") })
+	@ApiOperation(value = "ÎçîÏù¥", authorizations = { @Authorization(value = "basicAuth") })
 	@GetMapping("/{id}")
 	public String dummy(@PathVariable("id") String id) {
 		return "{id :" + id + "}";
