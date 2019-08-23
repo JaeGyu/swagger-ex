@@ -44,7 +44,8 @@ public class SwaggerConfig {
 				.groupName("dummy")
 				.select()
 				.apis(RequestHandlerSelectors.any())
-				.paths(Predicates.or(PathSelectors.ant("/v1/dummy/**")))
+				.paths(Predicates.or(PathSelectors.ant("/v1/dummy/**"),
+						PathSelectors.ant("/v1/member-profiles/**")))
 				.build();
 	}
 	
@@ -76,7 +77,6 @@ public class SwaggerConfig {
 		l.add(new ApiKey("mykey", "api_key", "header"));
 	    return l;
 	  }
-	
 	
 	
 	@Bean
